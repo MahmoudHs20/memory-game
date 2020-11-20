@@ -121,12 +121,16 @@ function check() {
     setTimeout(function() {
       images[pair[0].index].setAttribute("src", "back.jpg");
       images[pair[1].index].setAttribute("src", "back.jpg");
+      pair = [
+        { value: null, index: null },
+        { value: null, index: null }
+      ];
     }, 3000);
   }
 }
 images.forEach(im => {
   im.onclick = function() {
-    if (tries === 0) {
+    if (tries === 0 && pair[0].value === null && pair[1].value === null) {
       im.classList.add("show");
       im.setAttribute("show", "");
       im.setAttribute("src", pics[images.indexOf(im)]);
@@ -140,7 +144,7 @@ images.forEach(im => {
       };
 
       tries++;
-    } else {
+    } else if (pair[1].value === null && tries === 1) {
       if (im.hasAttribute("show")) {
       } else {
         images[pair[0].index].removeAttribute("show");
