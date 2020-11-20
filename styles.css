@@ -1,0 +1,140 @@
+.App,
+html {
+  text-align: center;
+  background: url("./memory-game/src/Components/bg.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+.logo {
+  transform: scale(0.7);
+  display: none;
+}
+.game {
+  position: relative;
+  color: wheat;
+  border: 3px solid whitesmoke;
+  border-radius: 3px;
+  width: 100%;
+  max-height: 100vh;
+  box-shadow: -1px 1px 42px 18px rgba(0, 0, 0, 0.5);
+  margin-top: -20px;
+  display: none;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+.card {
+  width: 125px;
+  height: 124px;
+  box-shadow: -1px 1px 22px 8px rgba(255, 255, 255, 0.11);
+  margin: 5px 0 5px;
+}
+
+.show {
+  transform: scale(5.7) translate(0, 26px);
+  position: absolute;
+  z-index: 44;
+  transition: 0.5s all cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+#restart {
+  padding: 8px 30px;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 10px;
+}
+#restart:hover {
+  background: rgb(224, 25, 25);
+  cursor: pointer;
+  color: azure;
+}
+#endScreen {
+  position: absolute;
+  top: 0;
+  border: 4px solid rgb(154, 0, 2);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 10% 0;
+  font-size: 50pt !important;
+  background: darkslategrey;
+  color: rgba(115, 216, 14, 0.808);
+  transform: scale(1.3);
+  border-radius: 20px;
+  display: none;
+}
+.side {
+  color: rgb(31, 29, 29);
+  position: absolute;
+  top: 30%;
+  width: 250px;
+  background: rgb(154, 0, 2);
+  padding: 15px;
+  color: azure;
+  border: 1.5px solid azure;
+  border-radius: 10px;
+  display: none;
+}
+h5 {
+  margin: 10px 0 20px;
+  font-size: 30px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border-bottom: 1px solid rgba(168, 168, 168, 0.616);
+  cursor: pointer;
+}
+h5 span {
+  height: 0;
+  display: inherit;
+  visibility: hidden;
+  transition: 0.5s all cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  text-align: start;
+  font-size: 25px;
+  margin: 10px 0;
+}
+.expand {
+  height: 220px;
+  display: inherit;
+  visibility: visible;
+  font-size: 21px !important;
+}
+li {
+  padding: 4px 0;
+}
+.mobile-info {
+  display: none;
+}
+@media (max-width: 480px) {
+  .logo {
+    transform: scale(0.5) translate(-250px, -70px);
+    left: -50px;
+  }
+  .game {
+    margin-bottom: 70px;
+  }
+  .logo-cont {
+    margin: 0 0 -49px 0;
+  }
+  .cards {
+    position: relative;
+  }
+  .card {
+    width: 50px;
+    height: 50px;
+  }
+  .side {
+    display: none !important;
+  }
+  .mobile-info {
+    color: azure;
+    font-size: 10px;
+    text-shadow: 1px 1px 12px 4px black;
+    border-bottom: 1px dotted;
+    display: inline;
+  }
+  #endScreen {
+    transform: scale(1);
+    font-size: 36px !important;
+  }
+}

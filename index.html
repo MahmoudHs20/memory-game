@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=3.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./login/login.css" />
+  </head>
+  <body>
+    <div class="App">
+      <div class="container">
+        <div class="logo-cont">
+          <img
+            id="logo"
+            src="./memory-game/src/Components/logo.png"
+            alt=""
+            class="logo"
+          />
+        </div>
+        <div class="game" id="game">
+          <div class="cards">
+            <img src="back.jpg" alt="" class="card" />
+            <img src="back.jpg" alt="" class="card" />
+            <img src="back.jpg" alt="" class="card" />
+            <img src="back.jpg" alt="" class="card" />
+            <img src="back.jpg" alt="" class="card" />
+            <img src="back.jpg" alt="" class="card" />
+            <img src="back.jpg" alt="" class="card" />
+            <img src="back.jpg" alt="" class="card" />
+            <img src="back.jpg" alt="" class="card" />
+            <img src="back.jpg" alt="" class="card" />
+            <img src="back.jpg" alt="" class="card" />
+            <img src="back.jpg" alt="" class="card" />
+            <img src="back.jpg" alt="" class="card" />
+            <img src="back.jpg" alt="" class="card" />
+            <img src="back.jpg" alt="" class="card" />
+            <img src="back.jpg" alt="" class="card" />
+            <img src="back.jpg" alt="" class="card" />
+            <img src="back.jpg" alt="" class="card" />
+            <img src="back.jpg" alt="" class="card" />
+            <img src="back.jpg" alt="" class="card" />
+          </div>
+          <div id="endScreen">
+            <p>You Win</p>
+            <p>Wanna try Again?</p>
+            <span id="restart">RESTART</span>
+          </div>
+        </div>
+      </div>
+      <div id="side" class="side">
+        <h5 id="show">
+          About <br />
+          <span>
+            <ul>
+              <li>In this game there is 20 images</li>
+              <li>18 images is deffirent</li>
+              <li>And only 2 is the same</li>
+              <li>Match these two to Win</li>
+            </ul>
+          </span>
+        </h5>
+        <h5 id="show">
+          Prize <br />
+          <span>
+            <ul>
+              <li>
+                Win in 2-5 tries
+                <ul>
+                  <li>5,000$</li>
+                </ul>
+              </li>
+              <li>
+                Win in more than 5 tries
+                <ul>
+                  <li>1,000$</li>
+                </ul>
+              </li>
+              <li>
+                Win in 1 try
+                <ul>
+                  <li>10,000$</li>
+                </ul>
+              </li>
+            </ul>
+          </span>
+        </h5>
+      </div>
+      <span class="mobile-info">
+        <span style="border-bottom: 1px dotted red;">About</span>
+        <br />
+        There is only two similar images in the grid Find them<br />TO WIN BIG
+        PRIZES</span
+      >
+    </div>
+    <!--  -->
+
+    <div id="login">
+      <div class="login-form">
+        <form action="/examples/actions/confirmation.php" method="post">
+          <div class="avatar"><i class="material-icons">&#xE7FF;</i></div>
+          <h4 class="modal-title">Login to Your Account</h4>
+          <div class="form-group">
+            <input
+              type="text"
+              id="username"
+              class="form-control"
+              placeholder="Username"
+              required="required"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              id="pass"
+              type="password"
+              class="form-control"
+              placeholder="Password"
+              required="required"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="number"
+              id="age"
+              class="form-control"
+              placeholder="Age"
+              required="required"
+            />
+          </div>
+          <div class="form-group">
+            <select name="city" id="city">
+              <option value="Tartus">Tartus</option>
+              <option value="Damas">Damascus</option>
+            </select>
+          </div>
+          <div class="form-group small clearfix">
+            <label class="checkbox-inline"
+              ><input type="checkbox" /> Remember me</label
+            >
+            <a href="#" class="forgot-link">Forgot Password?</a>
+          </div>
+          <div class="form-group">
+            <input
+              type="button"
+              id="loginbtn"
+              class="form-control"
+              required="required"
+              value="Login"
+            />
+          </div>
+        </form>
+        <div class="text-center small text-light">
+          Don't have an account? <a href="#">Sign up</a>
+        </div>
+      </div>
+    </div>
+    <audio id="soundWin" src="win.mp3"></audio>
+    <audio id="loseSound" src="lose.mp3"></audio>
+    <script src="config.js"></script>
+  </body>
+</html>
