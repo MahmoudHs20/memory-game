@@ -1,7 +1,7 @@
 .App,
 html {
   text-align: center;
-  background: url("./memory-game/src/Components/bg.jpg");
+  background: url("./images/bg.jpg");
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
