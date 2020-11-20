@@ -39,7 +39,7 @@ html {
 }
 
 .show {
-  transform: scale(5.7) translate(0, 26px);
+  transform: scale(5.7) translate(0, 21px);
   position: absolute;
   z-index: 44;
   transition: 0.5s all cubic-bezier(0.47, 0, 0.745, 0.715);

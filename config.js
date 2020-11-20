@@ -132,7 +132,7 @@ images.forEach(im => {
       im.setAttribute("src", pics[images.indexOf(im)]);
       window.setTimeout(function() {
         im.classList.remove("show");
-      }, 3000);
+      }, 2300);
 
       pair[0] = {
         value: pics[images.indexOf(im)],
@@ -145,11 +145,15 @@ images.forEach(im => {
       } else {
         images[pair[0].index].removeAttribute("show");
         im.setAttribute("src", pics[images.indexOf(im)]);
+        im.classList.add("show");
         tries = 0;
         pair[1] = {
           value: pics[images.indexOf(im)],
           index: images.indexOf(im)
         };
+        window.setTimeout(function() {
+          im.classList.remove("show");
+        }, 2300);
         check();
       }
     }
