@@ -11,6 +11,9 @@ html {
   transform: scale(0.7);
   display: none;
 }
+.logo-cont {
+  margin-top: -72px;
+}
 .game {
   position: relative;
   color: wheat;
@@ -107,14 +110,14 @@ li {
 }
 @media (max-width: 480px) {
   .logo {
-    transform: scale(0.5) translate(-250px, -70px);
+    transform: scale(0.4) translate(-539px, -200px);
     left: -50px;
   }
   .game {
     margin-bottom: 70px;
   }
   .logo-cont {
-    margin: 0 0 -49px 0;
+    margin: 0 0 -167px 0;
   }
   .cards {
     position: relative;
