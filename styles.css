@@ -39,7 +39,7 @@ html {
 }
 
 .show {
-  transform: scale(5.7) translate(0, 21px);
+  transform: scale(5.7) translate(83px, 21px);
   position: absolute;
   z-index: 44;
   transition: 0.5s all cubic-bezier(0.47, 0, 0.745, 0.715);
@@ -112,6 +112,12 @@ li {
 @media (max-width: 480px) {
   * {
     overflow: hidden;
+  }
+  .show {
+    transform: scale(5.7) translate(0, 21px);
+    position: absolute;
+    z-index: 44;
+    transition: 0.5s all cubic-bezier(0.47, 0, 0.745, 0.715);
   }
   .logo {
     transform: scale(0.4) translate(-539px, -200px);
