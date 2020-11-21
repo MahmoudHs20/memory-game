@@ -112,12 +112,12 @@ loginBtn.onclick = function() {
 // Functionality
 function check() {
   if (pair[0].value === pair[1].value) {
-    window.setTimeout(() => soundWin.play(), 600);
+    window.setTimeout(() => soundWin.play(), 900);
     setTimeout(function() {
       endScreen.style.display = "block";
     }, 1700);
   } else {
-    window.setTimeout(() => loseSound.play(), 600);
+    window.setTimeout(() => loseSound.play(), 900);
     setTimeout(function() {
       images[pair[0].index].setAttribute("src", "back.jpg");
       images[pair[1].index].setAttribute("src", "back.jpg");
