@@ -4,6 +4,7 @@ const endScreen = document.getElementById("endScreen");
 const side = document.getElementById("side");
 const game = document.getElementById("game");
 const logo = document.getElementById("logo");
+const countDown = document.getElementById("countDown");
 const restart = document.getElementById("restart");
 const listItems = document.querySelectorAll("#show");
 const age = document.getElementById("age");
@@ -88,6 +89,17 @@ var kids = [
   "./images/k1.jfif"
 ];
 var tries = 0;
+function getReadyAnimation() {
+  let counter = 2;
+  setInterval(() => {
+    countDown.firstElementChild.firstElementChild.textContent =
+      counter <= 3 ? counter : "Go";
+    counter += 1;
+  }, 1600);
+  setTimeout(() => {
+    countDown.style.display = "none";
+  }, 6000);
+}
 ///
 loginBtn.onclick = function() {
   if (
@@ -99,6 +111,8 @@ loginBtn.onclick = function() {
     loginForm.style.display = "none";
     game.style.display = "block";
     logo.style.display = "inline-block";
+    countDown.style.visibility = "visible";
+    getReadyAnimation();
     side.style.display = "block";
     if (age.value < 12) {
       pics = kids;

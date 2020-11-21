@@ -109,7 +109,39 @@ li {
 .mobile-info {
   display: none;
 }
-
+@keyframes count {
+  from {
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+.countAnimation {
+  animation: count 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+#countDown {
+  visibility: hidden;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  z-index: 999999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.575);
+  font-size: 150px;
+  color: azure;
+}
+#counts {
+  display: block;
+}
+#countDown #counts span {
+  margin: 2px 100px;
+}
 @media (max-width: 480px) {
   * {
     overflow: hidden;
