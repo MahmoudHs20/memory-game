@@ -112,12 +112,12 @@ loginBtn.onclick = function() {
 // Functionality
 function check() {
   if (pair[0].value === pair[1].value) {
-    soundWin.play();
+    window.setTimeout(() => soundWin.play(), 600);
     setTimeout(function() {
       endScreen.style.display = "block";
     }, 1700);
   } else {
-    loseSound.play();
+    window.setTimeout(() => loseSound.play(), 600);
     setTimeout(function() {
       images[pair[0].index].setAttribute("src", "back.jpg");
       images[pair[1].index].setAttribute("src", "back.jpg");
@@ -131,12 +131,12 @@ function check() {
 images.forEach(im => {
   im.onclick = function() {
     if (tries === 0 && pair[0].value === null && pair[1].value === null) {
-      window.setTimeout(() => im.classList.add("show"), 300);
+      window.setTimeout(() => im.classList.add("show"), 500);
       im.setAttribute("show", "");
       im.setAttribute("src", pics[images.indexOf(im)]);
       window.setTimeout(function() {
         im.classList.remove("show");
-      }, 2300);
+      }, 2500);
 
       pair[0] = {
         value: pics[images.indexOf(im)],
@@ -149,7 +149,7 @@ images.forEach(im => {
       } else {
         images[pair[0].index].removeAttribute("show");
         im.setAttribute("src", pics[images.indexOf(im)]);
-        window.setTimeout(() => im.classList.add("show"), 300);
+        window.setTimeout(() => im.classList.add("show"), 500);
         tries = 0;
         pair[1] = {
           value: pics[images.indexOf(im)],
@@ -157,7 +157,7 @@ images.forEach(im => {
         };
         window.setTimeout(function() {
           im.classList.remove("show");
-        }, 2300);
+        }, 2500);
         check();
       }
     }
