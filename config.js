@@ -131,7 +131,7 @@ function check() {
 images.forEach(im => {
   im.onclick = function() {
     if (tries === 0 && pair[0].value === null && pair[1].value === null) {
-      im.classList.add("show");
+      window.setTimeout(() => im.classList.add("show"), 300);
       im.setAttribute("show", "");
       im.setAttribute("src", pics[images.indexOf(im)]);
       window.setTimeout(function() {
@@ -149,7 +149,7 @@ images.forEach(im => {
       } else {
         images[pair[0].index].removeAttribute("show");
         im.setAttribute("src", pics[images.indexOf(im)]);
-        im.classList.add("show");
+        window.setTimeout(() => im.classList.add("show"), 300);
         tries = 0;
         pair[1] = {
           value: pics[images.indexOf(im)],
