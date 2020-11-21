@@ -1,5 +1,5 @@
 // Variables
-const imagez = document.querySelectorAll(".card");
+const imagez = document.querySelectorAll(".img-cont");
 const endScreen = document.getElementById("endScreen");
 const side = document.getElementById("side");
 const game = document.getElementById("game");
@@ -119,8 +119,10 @@ function check() {
   } else {
     window.setTimeout(() => loseSound.play(), 900);
     setTimeout(function() {
-      images[pair[0].index].setAttribute("src", "back.jpg");
-      images[pair[1].index].setAttribute("src", "back.jpg");
+      images[pair[0].index].firstElementChild.setAttribute("src", "back.jpg");
+      images[pair[1].index].firstElementChild.setAttribute("src", "back.jpg");
+      images[pair[0].index].lastElementChild.style.opacity = "0";
+      images[pair[1].index].lastElementChild.style.opacity = "0";
       pair = [
         { value: null, index: null },
         { value: null, index: null }
@@ -131,32 +133,51 @@ function check() {
 images.forEach(im => {
   im.onclick = function() {
     if (tries === 0 && pair[0].value === null && pair[1].value === null) {
-      window.setTimeout(() => im.classList.add("show"), 500);
+      window.setTimeout(() => {
+        im.classList.add("show");
+        im.lastElementChild.textContent =
+          "Views: " + Number.parseInt(im.getAttribute("data-views"));
+        im.lastElementChild.style.opacity = "1";
+      }, 500);
       im.setAttribute("show", "");
-      im.setAttribute("src", pics[images.indexOf(im)]);
+      im.firstElementChild.setAttribute("src", pics[images.indexOf(im)]);
       window.setTimeout(function() {
         im.classList.remove("show");
+        if (window.innerWidth < 480) im.lastElementChild.style.opacity = "0";
       }, 2500);
 
       pair[0] = {
         value: pics[images.indexOf(im)],
         index: images.indexOf(im)
       };
-
+      im.setAttribute(
+        "data-views",
+        Number.parseInt(im.getAttribute("data-views")) + 1
+      );
       tries++;
     } else if (pair[1].value === null && tries === 1) {
       if (im.hasAttribute("show")) {
       } else {
         images[pair[0].index].removeAttribute("show");
-        im.setAttribute("src", pics[images.indexOf(im)]);
-        window.setTimeout(() => im.classList.add("show"), 500);
+        im.firstElementChild.setAttribute("src", pics[images.indexOf(im)]);
+        window.setTimeout(() => {
+          im.classList.add("show");
+          im.lastElementChild.textContent =
+            "Views: " + Number.parseInt(im.getAttribute("data-views"));
+          im.lastElementChild.style.opacity = "1";
+        }, 500);
         tries = 0;
+        im.setAttribute(
+          "data-views",
+          Number.parseInt(im.getAttribute("data-views")) + 1
+        );
         pair[1] = {
           value: pics[images.indexOf(im)],
           index: images.indexOf(im)
         };
         window.setTimeout(function() {
           im.classList.remove("show");
+          if (window.innerWidth < 480) im.lastElementChild.style.opacity = "0";
         }, 2500);
         check();
       }
@@ -166,8 +187,10 @@ images.forEach(im => {
 
 restart.onclick = () => {
   endScreen.style.display = "none";
-  images[pair[0].index].setAttribute("src", "back.jpg");
-  images[pair[1].index].setAttribute("src", "back.jpg");
+  images[pair[0].index].firstElementChild.setAttribute("src", "back.jpg");
+  images[pair[1].index].firstElementChild.setAttribute("src", "back.jpg");
+  images[pair[0].index].lastElementChild.style.opacity = "0";
+  images[pair[1].index].lastElementChild.style.opacity = "0";
   pair = [
     { value: null, index: null },
     { value: null, index: null }
