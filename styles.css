@@ -43,7 +43,6 @@ html {
   position: absolute;
   z-index: 44;
   transition: 0.5s all cubic-bezier(0.47, 0, 0.745, 0.715);
-  font-size: 7px;
 }
 #restart {
   padding: 8px 30px;
@@ -110,17 +109,6 @@ li {
 .mobile-info {
   display: none;
 }
-.img-cont {
-  position: relative;
-}
-#details {
-  position: absolute;
-  left: 3px;
-  top: 2px;
-  opacity: 0;
-  margin-top: 5px;
-  background-color: rgba(0, 0, 0, 0.561);
-}
 
 @media (max-width: 480px) {
   * {
@@ -131,7 +119,6 @@ li {
     position: absolute;
     z-index: 44;
     transition: 0.5s all cubic-bezier(0.47, 0, 0.745, 0.715);
-    font-size: 5px;
   }
   .logo {
     transform: scale(0.4) translate(-539px, -200px);
