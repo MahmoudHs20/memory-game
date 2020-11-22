@@ -8,8 +8,9 @@ html {
   width: 100%;
 }
 .logo {
-  transform: scale(0.6);
+  transform: scale(2);
   display: none;
+  width: 350px;
 }
 .logo-cont {
   margin-top: -72px;
@@ -36,13 +37,15 @@ html {
   height: 124px;
   box-shadow: -1px 1px 22px 8px rgba(255, 255, 255, 0.11);
   margin: 5px 0 5px;
+  border-radius: 50%;
 }
 
 .show {
-  transform: scale(5.7) translate(83px, 21px);
+  transform: scale(5.7) translate(0px, 21px);
   position: absolute;
   z-index: 44;
   transition: 0.5s all cubic-bezier(0.47, 0, 0.745, 0.715);
+  border-radius: 4px;
 }
 #restart {
   padding: 8px 30px;
@@ -74,7 +77,18 @@ html {
   position: absolute;
   top: 30%;
   width: 250px;
-  background: rgb(154, 0, 2);
+  background: #ff0099; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #493240,
+    #ff0099
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #493240,
+    #ff0099
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   padding: 15px;
   color: azure;
   border: 1.5px solid azure;
@@ -132,7 +146,10 @@ li {
   z-index: 999999;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.575);
+  background: url("./logoz.png");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat !important;
+  background-position: center;
   font-size: 150px;
   color: azure;
 }
@@ -151,9 +168,10 @@ li {
     position: absolute;
     z-index: 44;
     transition: 0.5s all cubic-bezier(0.47, 0, 0.745, 0.715);
+    border-radius: 2px !important;
   }
   .logo {
-    transform: scale(0.4) translate(-539px, -200px);
+    transform: scale(1) translateY(-78px);
     left: -50px;
   }
   .game {
