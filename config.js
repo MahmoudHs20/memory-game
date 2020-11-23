@@ -1,10 +1,42 @@
 // Pre-render
-var Preimgs = [];
-[1, 2, 3, 4, 5, 6].map(n => {
-  let newImg = document.createElement("img");
-  newImg.setAttribute("src", "./'images/s" + `${n}` + ".jpg");
-  Preimgs.push(newImg);
-});
+var im1 = document.createElement("img");
+im1.setAttribute("src", "./'images/s1");
+var im2 = document.createElement("img");
+im2.setAttribute("src", "./'images/s2");
+var im3 = document.createElement("img");
+im3.setAttribute("src", "./'images/s3");
+var im4 = document.createElement("img");
+im4.setAttribute("src", "./'images/s4");
+var im5 = document.createElement("img");
+im5.setAttribute("src", "./'images/s5");
+var im6 = document.createElement("img");
+im6.setAttribute("src", "./'images/s6");
+var im7 = document.createElement("img");
+im7.setAttribute("src", "./'images/s7");
+var im8 = document.createElement("img");
+im8.setAttribute("src", "./'images/s8");
+var im9 = document.createElement("img");
+im9.setAttribute("src", "./'images/s9");
+var im10 = document.createElement("img");
+im10.setAttribute("src", "./'images/s10");
+var im11 = document.createElement("img");
+im11.setAttribute("src", "./'images/s11");
+var im12 = document.createElement("img");
+im12.setAttribute("src", "./'images/s12");
+var im13 = document.createElement("img");
+im13.setAttribute("src", "./'images/s13");
+var im40 = document.createElement("img");
+im40.setAttribute("src", "./'images/s14");
+var im14 = document.createElement("img");
+im14.setAttribute("src", "./'images/s15");
+var im15 = document.createElement("img");
+im15.setAttribute("src", "./'images/s16");
+var im16 = document.createElement("img");
+im16.setAttribute("src", "./'images/s17");
+var im17 = document.createElement("img");
+im17.setAttribute("src", "./'images/s18");
+var im18 = document.createElement("img");
+im18.setAttribute("src", "./'images/s19");
 // Variables
 const imagez = document.querySelectorAll(".card");
 const endScreen = document.getElementById("endScreen");
