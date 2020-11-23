@@ -24,7 +24,7 @@ var pair = [
 var pics = [];
 let img = document.createElement("img");
 img.setAttribute("src", "./images/s3.jpg");
-countDown.appendChild(img);
+
 var tartus = [
   "./images/s1.jpg",
   "./images/s2.jpg",
