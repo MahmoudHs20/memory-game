@@ -1,3 +1,10 @@
+// Pre-render
+var Preimgs = [];
+[1, 2, 3, 4, 5, 6].map(n => {
+  let newImg = document.createElement("img");
+  newImg.setAttribute("src", "./'images/s" + `${n}` + ".jpg");
+  Preimgs.push(newImg);
+});
 // Variables
 const imagez = document.querySelectorAll(".card");
 const endScreen = document.getElementById("endScreen");
@@ -22,8 +29,6 @@ var pair = [
   { value: null, index: null }
 ];
 var pics = [];
-let img = document.createElement("img");
-img.setAttribute("src", "./images/s3.jpg");
 
 var tartus = [
   "./images/s1.jpg",
