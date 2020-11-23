@@ -22,6 +22,9 @@ var pair = [
   { value: null, index: null }
 ];
 var pics = [];
+let img = document.createElement("img");
+img.setAttribute("src", "./images/s3.jpg");
+countDown.appendChild(img);
 var tartus = [
   "./images/s1.jpg",
   "./images/s2.jpg",
@@ -158,7 +161,6 @@ images.forEach(im => {
         value: pics[images.indexOf(im)],
         index: images.indexOf(im)
       };
-
       tries++;
     } else if (pair[1].value === null && tries === 1) {
       if (im.hasAttribute("show")) {
