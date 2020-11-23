@@ -77,17 +77,9 @@ html {
   position: absolute;
   top: 30%;
   width: 250px;
-  background: #ff0099; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #493240,
-    #ff0099
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #493240,
-    #ff0099
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #ff0099;
+  background: -webkit-linear-gradient(to right, #493240, #ff0099);
+  background: linear-gradient(to right, #493240, #ff0099);
 
   padding: 15px;
   color: azure;
@@ -142,14 +134,15 @@ li {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 0;
   z-index: 999999;
+  top: 0;
   width: 100%;
   height: 100%;
   background: url("./logoz.png");
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 5, 213, 0.959);
   background-repeat: no-repeat !important;
-  background-position: center;
+  background-position-x: center;
+  background-position-y: -40%;
   font-size: 150px;
   color: azure;
 }
@@ -200,5 +193,32 @@ li {
   #endScreen {
     transform: scale(1);
     font-size: 36px !important;
+  }
+  #countDown {
+    visibility: hidden;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 999999;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 5, 213, 0.945);
+    background-repeat: no-repeat !important;
+    background-position-x: center;
+    background-size: cover;
+    font-size: 150px;
+    color: azure;
+    overflow: visible !important;
+  }
+  #counts {
+    display: block;
+    overflow: visible !important;
+  }
+  #countDown #counts span {
+    position: relative;
+    overflow: visible !important;
   }
 }
