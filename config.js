@@ -185,8 +185,8 @@ images.forEach(im => {
 
 restart.onclick = () => {
   endScreen.style.display = "none";
-  images[pair[0].index].setAttribute("src", "back.jpg");
-  images[pair[1].index].setAttribute("src", "back.jpg");
+  images[pair[0].index].setAttribute("src", "back.png");
+  images[pair[1].index].setAttribute("src", "back.png");
   pair = [
     { value: null, index: null },
     { value: null, index: null }
